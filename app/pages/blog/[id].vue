@@ -32,18 +32,16 @@ definePageMeta({
 
 <template>
   <div class="post-page">
-    <!-- Loading state -->
+
     <div v-if="pending" class="loading">
       <p>Loading post...</p>
     </div>
 
-    <!-- Error state -->
     <div v-else-if="error" class="error">
       <p>Error loading post: {{ error.message }}</p>
       <NuxtLink to="/" class="back-link">← Back to Home</NuxtLink>
     </div>
 
-    <!-- Post content -->
     <article v-else class="post-content">
       <header class="post-header">
         <h1 class="post-title">{{ post.title }}</h1>
