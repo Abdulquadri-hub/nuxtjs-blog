@@ -15,6 +15,19 @@ useHead({
   ]
 })
 
+// route validation 
+definePageMeta({
+  validation: async (r) => {
+    const id = Number(r.params.id)
+
+    if (isNaN(id) || id < 1 || id > 100) {
+      return false 
+    }
+
+    return true
+  }
+})
+
 </script>
 
 <template>
