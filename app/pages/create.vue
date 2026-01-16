@@ -1,13 +1,18 @@
+<script setup>
+   const counter = useCounter()
+</script>
+
 <template>
     <div>
-
+        Counter: {{ counter }}
+        <button @click="counter++">Increment</button>
+        <br>
+        <NuxtLink to="/about">About Page</NuxtLink>
     </div>
 </template>
 
-<script setup>
 
-</script>
 
-<style lang="" scoped>
+<style lang="scss" scoped>
 
 </style>
